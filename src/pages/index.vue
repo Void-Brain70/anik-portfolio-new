@@ -1,7 +1,7 @@
 <template>
     <div>
         <section>
-            <CommonHero/>
+          <CommonHero/>
         </section>
         <section >
             <CommonAbout/>
@@ -19,9 +19,8 @@
 </template>
 
 <script setup>
-import ContactMe from '~/components/common/ContactMe.vue';
 
-
+import ContactMe from "~/components/common/ContactMe.vue";
 </script>
 
 <style scoped>

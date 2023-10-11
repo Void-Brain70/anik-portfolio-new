@@ -15,8 +15,10 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.14",
     "@nuxtjs/tailwindcss": "^6.7.0",
+    "aos": "^3.0.0-beta.6",
     "emailjs-com": "^3.2.0",
     "nuxt-icon": "^0.4.1",
-    "swiper": "^10.2.0"
+    "swiper": "^10.2.0",
+    "vue3-circle-progress": "^1.0.7"
   }
 }

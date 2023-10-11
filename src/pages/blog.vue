@@ -5,7 +5,11 @@
          <CommonPageHeading textOne="My" textTwo="Blogs" />
        </div>
        <div class="container mx-auto my-auto py-12">
-<!--         <blog-card/>-->
+         <div class="py-8">
+           <blog-card />
+         </div>
+          <skill-card/>
+         <CircularBar/>
        </div>
      </div>
    </section>
@@ -13,6 +17,9 @@
 <script setup>
 import BlogCard from "~/components/card/BlogCard.vue";
 import SwiperSlide from "~/components/slideshow/SwiperSlide.vue";
+import CircularBar from "~/components/bar/CircularBar.vue";
+import SampleCard from "~/components/card/SampleCard.vue";
+import SkillCard from "~/components/card/SkillCard.vue";
 </script>
 
 <style scoped>

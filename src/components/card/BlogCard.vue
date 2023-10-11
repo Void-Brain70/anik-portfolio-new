@@ -1,59 +1,47 @@
 <template>
   <div>
-    <div>
-      <div class="box">
-        <a href="#" class="btn btn-1">Hover Me</a>
-        <a href="#" class="btn btn-2">Hover Me</a>
-        <a href="#" class="btn btn-3">Hover Me</a>
-        <a href="#" class="btn btn-4">Hover Me</a>
-      </div>
-    </div>
+    <circle-progress :percent="percent" class="text-white"
+                     :is-shadow="true"
+                     :shadow="{
+        inset: true,
+        vertical: 10,
+        horizontal: -8,
+        blur: 4,
+        opacity: .4,
+        color:'#288feb'
+    }"
+                     :is-bg-shadow="true"
+                     :bg-shadow="{
+        inset: true,
+        vertical: 2,
+        horizontal: 2,
+        blur: 4,
+        opacity: .4,
+        color: 'red'
+    }"
+    />
   </div>
 </template>
 
 <script setup>
+import "vue3-circle-progress/dist/circle-progress.css";
+import CircleProgress from "vue3-circle-progress";
+const percent = ref(70);
+
+onMounted(() => {
+  setInterval(() => {
+    if (percent.value === 25) {
+      percent.value = 75;
+    } else {
+      percent.value = 25;
+    }
+  }, 1000);
+});
 
 </script>
 
 <style scoped>
-.box{
-  position: absolute;
-  display: flex;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.btn {
-  position: relative;
-  display: block;
-  font-size: 14px;
-  color: white;
-  border: 2px solid #00ccff;
-  background: transparent;
-  margin: 0 20px;
-  padding: 14px 60px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bolder;
-  overflow: hidden;
-  transition: 1s all ease;
-}
-
-.btn::before {
-  content: " ";
-  position: absolute;
-  z-index: -1;
-  background-color: #00ccff !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.6s ease;
-}
-.btn-1::before{
-  width: 0;
-  height: 100%;
-}
-.btn:hover::before{
-  width: 100%;
+a {
+  color: #2B2B2B;
 }
 </style>

@@ -1,58 +1,56 @@
 <template>
     <div class="">
         <!-- <CommonSkillSection/> -->
-        <div class="bg-[#e9e2f3]">
+        <div class="bg-[#161616]">
             <div>
                 <div class="container mx-auto my-auto">
                     <div class="flex justify-center">
-                        <h3 class="text-center pt-8 text-[20px] md:text-[24px] border-b-4 border-[#76b5c5] max-w-fit">My Programming
+                        <h3 class="text-center pt-8 text-[20px] md:text-[24px] border-b-4 border-[#5b6cf1] max-w-fit text-transparent  bg-clip-text  bg-gradient-to-r from-sky-500 to-indigo-500">My Programming
                             Language Skill List</h3>
                     </div>
                     <div class="flex flex-wrap justify-evenly items-center py-12 px-2">
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/js.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/python.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/c.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/cPlus.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/php.png" />
+                        <div v-for="(item, i) in language" :key="i">
+                          <img class="h-[60px] md:h-[100px]" :src="item.image" />
+                        </div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="container mx-auto my-auto">
                     <div class="flex justify-center">
-                        <h3 class="text-center pt-8 text-[20px] md:text-[24px] border-b-4 border-[#76b5c5] max-w-fit">My Frontend Framework
+                        <h3 class="text-center pt-8 text-[20px] md:text-[24px] border-b-4 border-[#5b6cf1] max-w-fit text-transparent  bg-clip-text  bg-gradient-to-r from-sky-500 to-indigo-500">My Frontend Framework
                             Skill List</h3>
                     </div>
                     <div class="flex flex-wrap items-center justify-center gap-20 py-12">
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/vue.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/nuxt.png" />
+                      <div v-for="(item, i) in fronted" :key="i">
+                        <img class="h-[60px] md:h-[100px]" :src="item.image" />
+                      </div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="container mx-auto my-auto">
                     <div class="flex justify-center">
-                        <h3 class="text-center pt-8 text-[20px] md:text-[24px] border-b-4 border-[#76b5c5] max-w-fit">My Backend Framework
+                        <h3 class="text-center pt-8 text-[20px] md:text-[24px] border-b-4 border-[#5b6cf1] max-w-fit text-transparent  bg-clip-text  bg-gradient-to-r from-sky-500 to-indigo-500">My Backend Framework
                             Skill List</h3>
                     </div>
                     <div class="flex flex-wrap items-center justify-evenly py-12 px-2">
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/laravel.png" />
+                      <div v-for="(item, i) in backend" :key="i">
+                        <img class="h-[60px] md:h-[100px]" :src="item.image" />
+                      </div>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="container mx-auto my-auto">
                     <div class="flex justify-center">
-                        <h3 class="text-center pt-8 text-[20px] md:text-[24px] border-b-4 border-[#76b5c5] max-w-fit">My Design
+                        <h3 class="text-center pt-8 text-[20px] md:text-[24px] border-b-4 border-[#5b6cf1] max-w-fit text-transparent  bg-clip-text  bg-gradient-to-r from-sky-500 to-indigo-500">My Design
                             Skill List</h3>
                     </div>
                     <div class="flex flex-wrap items-center justify-evenly py-16 px-2">
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/html.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/css.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/vuetify.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/tailwind.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/bootstrap.png" />
-                        <img class="h-[60px] md:h-[100px]" src="../public/skill/sass.png" />
+                      <div v-for="(item, i) in design" :key="i">
+                        <img class="h-[60px] md:h-[100px]" :src="item.image" />
+                      </div>
                     </div>
                 </div>
             </div>
@@ -61,13 +59,26 @@
 </template>
 
 <script setup>
-const lang = [
-    { name: "LSM", image: "/public/skill/js.png", link: "" },
-    { name: "Photography Blog", image: "/public/skill/python.png", link: "" },
-    { name: "News Protal", image: "/public/skill/c.png", link: "" },
-    { name: "LSM", image: "/public/skill/c.png", link: "" },
-    { name: "Photography Blog", image: "/public/skill/cPlus.png", link: "" },
-    { name: "News Protal", image: "/public/skill/php.png", link: "" }
+const language = [
+    { name: "JavaScript", image: "/skill/js.png" },
+    { name: "Python", image: "/skill/python.png"},
+    { name: "C", image: "/skill/c.png"},
+    { name: "C++", image: "/skill/c.png"},
+    { name: "PHP", image: "/skill/php.png" }
 ]
-
+const fronted = [
+  { name: "Vue", image: "/skill/vue.png" },
+  { name: "Nuxt", image: "/skill/nuxt.png" },
+]
+const backend = [
+  { name: "Laravel", image: "/skill/laravel.png" },
+]
+const design = [
+  { name: "HTML", image: "/skill/html.png" },
+  { name: "CSS", image: "/skill/css.png" },
+  { name: "Tailwind", image: "/skill/tailwind.png" },
+  { name: "Vuetify", image: "/skill/vuetify.png" },
+  { name: "Bootstrap", image: "/skill/bootstrap.png" },
+  { name: "Sass", image: "/skill/sass.png" },
+]
 </script>
