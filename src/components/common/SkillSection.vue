@@ -45,6 +45,7 @@ const skills = [
     { text: "HTML" },
     { text: "CSS" },
     { text: "SCSS" },
+    { text: "Bootstrap" },
     { text: "Laravel" }
 ]
 const isOpen = ref(true)
