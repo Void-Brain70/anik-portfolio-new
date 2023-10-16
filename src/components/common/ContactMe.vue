@@ -15,7 +15,7 @@
             </div>
             <div class="text-center pt-8">
                 <button @click="submitContactData"
-                    class="text-[14px] md:text-[18px] capitalize text-[#468dfc] hover:text-white border-2 border-[#468dfc] hover:bg-[#468dfc] to-pink-500 p-2 md:p-2 rounded-lg">Submit</button>
+                    class="font-['Young_Serif' 'serif'] font-[600] text-[14px] md:text-[18px] capitalize text-[#468dfc] hover:text-white border-2 border-[#468dfc] hover:bg-gradient-to-r from-sky-500 to-indigo-500 transition duration-500 p-2 md:px-4 rounded-full">Submit</button>
             </div>
         </div>
     </div>
